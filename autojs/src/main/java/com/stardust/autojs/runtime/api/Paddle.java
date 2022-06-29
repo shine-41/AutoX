@@ -34,7 +34,7 @@ public class Paddle {
         if (!mPredictor.isLoaded()) {
             initOcr(GlobalAppContext.get(), cpuThreadNum, useSlim);
         }
-        return mPredictor.runOcr(bitmap, 4, true);
+        return mPredictor.runOcr(bitmap, cpuThreadNum, useSlim);
     }
 
     public List<OcrResult> ocr(ImageWrapper image, int cpuThreadNum, String myModelPath) {
